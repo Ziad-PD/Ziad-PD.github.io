@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============ SEO META TAGS ============ -->
+  <title>ZIAD MOHAMED | PRODUCT DESIGNER</title>
+  <meta name="description" content="Ziad Mohamed is a Senior Product Designer specializing in UX/UI design, design systems, ERP platforms, FinTech, and EdTech solutions. Available for freelance." />
+  <meta name="keywords" content="Product Designer, UI UX Designer, Ziad Mohamed, Figma, Design Systems, ERP, FinTech, EdTech, Freelance Designer, Egypt" />
+  <meta name="author" content="Ziad Mohamed" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://ziadmohamed.netlify.app/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ZIAD MOHAMED | PRODUCT DESIGNER" />
+  <meta property="og:description" content="Senior Product Designer specializing in scalable design systems and user-centered digital products." />
+  <meta property="og:url" content="https://ziadmohamed.netlify.app/" />
+  <meta property="og:image" content="./assets/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ZIAD MOHAMED | PRODUCT DESIGNER" />
+  <meta name="twitter:description" content="Senior Product Designer specializing in scalable design systems and user-centered digital products." />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ziad Mohamed",
+    "jobTitle": "Product Designer",
+    "description": "Senior Product Designer specializing in UX/UI design, design systems, ERP, FinTech, and EdTech solutions.",
+    "url": "https://ziadmohamed.netlify.app/",
+    "sameAs": [
+      "https://www.behance.net/ziadmohmed2",
+      "https://www.linkedin.com/in/ziad-mohamed-96832a31b/",
+      "https://www.facebook.com/ziad.mohmed.568294",
+      "https://www.instagram.com/ziad__mohamed_00"
+    ],
+    "email": "zzm2369@gmail.com"
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg?v=1777709420" />
+  <link rel="shortcut icon" href="./assets/favicon.svg?v=1777709420" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ============ CURSOR ============ -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ============ SCROLL PROGRESS ============ -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a href="#hero" class="nav-logo" aria-label="Ziad Mohamed - Home">
+        <img src="./assets/logo.svg" alt="Ziad Mohamed Logo" />
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-links" role="list">
+        <li><a href="#about"        data-en="About me"     data-ar="من أنا">About me</a></li>
+        <li><a href="#resume"       data-en="Resume"       data-ar="السيرة">Resume</a></li>
+        <li><a href="#portfolio"    data-en="Portfolio"    data-ar="أعمالي">Portfolio</a></li>
+        <li><a href="#certificates" data-en="Certificates" data-ar="شهاداتي">Certificates</a></li>
+        <li><a href="#contact"      data-en="Contact"      data-ar="تواصل">Contact</a></li>
+      </ul>
+
+      <!-- Right Controls -->
+      <div class="nav-right">
+        <a href="#portfolio" class="nav-cta" data-en="Portfolio" data-ar="أعمالي">Portfolio</a>
+
+        <!-- Language Toggle -->
+        <div class="lang-toggle" role="group" aria-label="Language switcher">
+          <button class="lang-btn active" id="langEN" aria-pressed="true">EN</button>
+          <button class="lang-btn" id="langAR" aria-pressed="false">AR</button>
+        </div>
+
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="#about"        data-en="About me"     data-ar="من أنا">About me</a>
+    <a href="#resume"       data-en="Resume"       data-ar="السيرة">Resume</a>
+    <a href="#portfolio"    data-en="Portfolio"    data-ar="أعمالي">Portfolio</a>
+    <a href="#certificates" data-en="Certificates" data-ar="شهاداتي">Certificates</a>
+    <a href="#contact"      data-en="Contact"      data-ar="تواصل">Contact</a>
+  </nav>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section id="hero" class="hero" aria-label="Hero section">
+    <div class="hero-bg">
+      <img src="./assets/ziad-photo.png" alt="" class="hero-bg-photo" aria-hidden="true" />
+      <div class="hero-gradient" aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="fade-up">
+        <span class="hero-badge" data-en="AVAILABLE FOR FREELANCE" data-ar="متاح للعمل الحر">AVAILABLE FOR FREELANCE</span>
+      </div>
+
+      <h1 class="hero-title fade-up fade-up-delay-1">
+        <span data-en="Designing clean," data-ar="تصميم بسيط،">Designing clean,</span><br />
+        <span class="typing-wrapper"><span id="typingText">intuitive</span><span class="cursor-blink"></span></span><br />
+        <span data-en="digital experiences." data-ar="تجارب رقمية.">digital experiences.</span>
+      </h1>
+
+      <p class="hero-sub fade-up fade-up-delay-2"
+         data-en="I'm a Product Designer specializing in crafting scalable design systems and user-centered digital products — from ERP platforms to FinTech solutions and beyond."
+         data-ar="أنا مصمم منتجات متخصص في بناء أنظمة تصميم قابلة للتوسع ومنتجات رقمية تمحورت حول المستخدم — من منصات ERP إلى حلول FinTech وما هو أبعد من ذلك.">
+        I'm a Product Designer specializing in crafting scalable design systems and user-centered digital products — from ERP platforms to FinTech solutions and beyond.
+      </p>
+
+      <div class="hero-actions fade-up fade-up-delay-3">
+        <a href="#portfolio" class="btn-primary" data-en="View My Work" data-ar="مشاهدة أعمالي">
+          <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+          <span>View My Work</span>
+        </a>
+        <a href="#contact" class="btn-outline" data-en="Let's Connect" data-ar="تواصل معي">
+          <span>Let's Connect</span>
+        </a>
+      </div>
+
+      <div class="hero-social fade-up fade-up-delay-4">
+        <a href="https://www.behance.net/ziadmohmed2" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Behance">
+          <i class="fa-brands fa-behance"></i>
+        </a>
+        <a href="https://wa.me/201007011458" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/ziad-mohamed-96832a31b/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.facebook.com/ziad.mohmed.568294" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/ziad__mohamed_00" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ME SECTION ============ -->
+  <section id="about" aria-labelledby="about-title">
+    <div class="section-inner">
+      <div class="section-header fade-up">
+        <span class="section-label" data-en="Get to know me" data-ar="تعرف عليّ">Get to know me</span>
+        <h2 class="section-title" id="about-title" data-en="About Me" data-ar="من أنا">About Me</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text fade-up fade-up-delay-1">
+          <p data-en="Hi, I'm Ziad — a Product Designer with a passion for turning complex problems into elegant, intuitive solutions. With a background in Business Information Systems and 2+ years of hands-on experience, I bridge the gap between user needs and business goals."
+             data-ar="مرحباً، أنا زياد — مصمم منتجات شغوف بتحويل المشاكل المعقدة إلى حلول أنيقة وبديهية. بخلفية في نظم معلومات الأعمال وأكثر من سنتين من الخبرة العملية، أجسّر الفجوة بين احتياجات المستخدم وأهداف العمل.">
+            Hi, I'm Ziad — a Product Designer with a passion for turning complex problems into elegant, intuitive solutions. With a background in Business Information Systems and 2+ years of hands-on experience, I bridge the gap between user needs and business goals.
+          </p>
+          <p data-en="My work spans ERP systems, FinTech platforms, EdTech products, and enterprise solutions — always with a focus on clarity, scalability, and impact. I believe great design isn't just about aesthetics; it's about creating experiences that feel effortless."
+             data-ar="يمتد عملي عبر أنظمة ERP ومنصات FinTech ومنتجات EdTech وحلول المؤسسات — دائماً مع التركيز على الوضوح وقابلية التوسع والتأثير. أؤمن بأن التصميم الرائع لا يتعلق فقط بالجماليات؛ بل يتعلق بخلق تجارب تبدو سلسة.">
+            My work spans ERP systems, FinTech platforms, EdTech products, and enterprise solutions — always with a focus on clarity, scalability, and impact. I believe great design isn't just about aesthetics; it's about creating experiences that feel effortless.
+          </p>
+          <p data-en="When I step away from the screen, I'm exploring emerging design trends, mentoring aspiring designers, and contributing to the broader design community."
+             data-ar="حين أبتعد عن الشاشة، أستكشف أحدث توجهات التصميم وأرشد المصممين الطامحين وأساهم في مجتمع التصميم الأوسع.">
+            When I step away from the screen, I'm exploring emerging design trends, mentoring aspiring designers, and contributing to the broader design community.
+          </p>
+          <div style="margin-top: 32px;">
+            <a href="https://drive.google.com/drive/folders/1VehOH_jKgrV2wyw3b_ytsTUomC-gimwf?usp=sharing"
+               target="_blank" rel="noopener noreferrer"
+               class="btn-outline"
+               data-en="Review CV" data-ar="مراجعة السيرة الذاتية">
+              <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
+              <span>Review CV</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="about-card fade-up fade-up-delay-2">
+          <div class="about-card-section">
+            <span class="about-card-label" data-en="SKILLS" data-ar="المهارات">SKILLS</span>
+            <div class="skills-grid">
+              <span class="skill-tag">UI/UX Design</span>
+              <span class="skill-tag">Design Systems</span>
+              <span class="skill-tag">Product Strategy</span>
+              <span class="skill-tag">Wireframing</span>
+              <span class="skill-tag">Prototyping</span>
+              <span class="skill-tag">User Research</span>
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">Typography</span>
+              <span class="skill-tag">Web Design</span>
+            </div>
+          </div>
+          <div class="about-card-section">
+            <span class="about-card-label" data-en="LANGUAGES" data-ar="اللغات">LANGUAGES</span>
+            <p class="languages-text" data-en="Arabic (Native) • English (Fluent)" data-ar="العربية (اللغة الأم) • الإنجليزية (طلاقة)">Arabic (Native) • English (Fluent)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-grid">
+        <div class="stat-card fade-up fade-up-delay-1">
+          <span class="stat-number" data-target="2">0</span>
+          <span class="stat-label" data-en="Years Experience" data-ar="سنوات خبرة">Years Experience</span>
+        </div>
+        <div class="stat-card fade-up fade-up-delay-2">
+          <span class="stat-number" data-target="7">0</span>
+          <span class="stat-label" data-en="Projects Completed" data-ar="مشروع مكتمل">Projects Completed</span>
+        </div>
+        <div class="stat-card fade-up fade-up-delay-3">
+          <span class="stat-number" data-target="7">0</span>
+          <span class="stat-label" data-en="Happy Clients" data-ar="عميل سعيد">Happy Clients</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESUME SECTION ============ -->
+  <section id="resume" aria-labelledby="resume-title">
+    <div class="section-inner">
+      <div class="section-header fade-up">
+        <span class="section-label" data-en="My background" data-ar="خلفيتي">My background</span>
+        <h2 class="section-title" id="resume-title" data-en="Resume" data-ar="السيرة الذاتية">Resume</h2>
+      </div>
+
+      <div class="resume-grid">
+
+        <!-- Education -->
+        <div class="fade-up fade-up-delay-1">
+          <div class="resume-col-title">
+            <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+            <span data-en="Education" data-ar="التعليم">Education</span>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-card">
+                <span class="timeline-tag" data-en="University" data-ar="جامعة">University</span>
+                <div class="timeline-role" data-en="Bachelor of Business Information Systems" data-ar="بكالوريوس نظم معلومات الأعمال">Bachelor of Business Information Systems</div>
+                <div class="timeline-org" data-en="بكالوريوس نظم معلومات الأعمال" data-ar="Business Information Systems">بكالوريوس نظم معلومات الأعمال</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="fade-up fade-up-delay-2">
+          <div class="resume-col-title">
+            <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+            <span data-en="Experience" data-ar="الخبرة">Experience</span>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-card">
+                <span class="timeline-tag">Passos ERP System</span>
+                <div class="timeline-role" data-en="Lead Product Designer" data-ar="مصمم منتجات رئيسي">Lead Product Designer</div>
+                <div class="timeline-org" data-en="Enterprise Resource Planning" data-ar="تخطيط موارد المؤسسات">Enterprise Resource Planning</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-card">
+                <span class="timeline-tag">Regional Projects</span>
+                <div class="timeline-role" data-en="UI/UX Designer" data-ar="مصمم واجهات وتجربة مستخدم">UI/UX Designer</div>
+                <div class="timeline-org" data-en="Various Digital Products" data-ar="منتجات رقمية متنوعة">Various Digital Products</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PORTFOLIO SECTION ============ -->
+  <section id="portfolio" aria-labelledby="portfolio-title">
+    <div class="section-inner">
+      <div class="section-header fade-up">
+        <span class="section-label" data-en="My work" data-ar="أعمالي">My work</span>
+        <h2 class="section-title" id="portfolio-title" data-en="Portfolio" data-ar="المحفظة">Portfolio</h2>
+        <p class="section-subtitle"
+           data-en="A curated selection of projects showcasing design excellence and measurable impact."
+           data-ar="مجموعة مختارة من المشاريع تُظهر التميز في التصميم والأثر القابل للقياس.">
+          A curated selection of projects showcasing design excellence and measurable impact.
+        </p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs fade-up" role="tablist" aria-label="Filter projects by category">
+        <button class="filter-tab active" data-filter="all"   data-en="All"         data-ar="الكل">All</button>
+        <button class="filter-tab" data-filter="saas"        data-en="SaaS"        data-ar="SaaS">SaaS</button>
+        <button class="filter-tab" data-filter="education"   data-en="Education"   data-ar="تعليم">Education</button>
+        <button class="filter-tab" data-filter="ecommerce"   data-en="E-Commerce"  data-ar="تجارة إلكترونية">E-Commerce</button>
+        <button class="filter-tab" data-filter="edtech"      data-en="EdTech"      data-ar="تعليم تقني">EdTech</button>
+        <button class="filter-tab" data-filter="productivity" data-en="Productivity" data-ar="إنتاجية">Productivity</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- Project 1: SaaS Landing Page -->
+        <article class="project-card fade-up" data-category="saas"
+                 onclick="window.open('https://www.behance.net/gallery/245492535/SaaS-Product-Landing-Page','_blank')"
+                 role="button" tabindex="0" aria-label="View SaaS Landing Page project on Behance">
+          <div class="project-img-wrap">
+            <img src="./assets/proj-saas.png"
+                 alt="SaaS Product Landing Page project cover" loading="lazy" />
+            <div class="project-overlay">
+              <div class="project-overlay-icon">
+                <i class="fa-brands fa-behance"></i>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category" data-en="SaaS" data-ar="SaaS">SaaS</span>
+            <h3 class="project-name" data-en="SaaS Product Landing Page" data-ar="صفحة هبوط منتج SaaS">SaaS Product Landing Page</h3>
+            <p class="project-desc"
+               data-en="Modern landing page design for a SaaS product with conversion-focused UX."
+               data-ar="تصميم صفحة هبوط عصرية لمنتج SaaS مع تجربة مستخدم تركز على التحويل.">
+              Modern landing page design for a SaaS product with conversion-focused UX.
+            </p>
+          </div>
+        </article>
+
+        <!-- Project 2: Wasleen Admin Dashboard -->
+        <article class="project-card fade-up fade-up-delay-1" data-category="education"
+                 onclick="window.open('https://www.behance.net/gallery/242264159/Wasleen-School-Transport-Admin-Dashboard','_blank')"
+                 role="button" tabindex="0" aria-label="View Wasleen Admin Dashboard project on Behance">
+          <div class="project-img-wrap">
+            <img src="./assets/proj-wasleen-admin.png"
+                 alt="Wasleen Admin Dashboard project cover" loading="lazy" />
+            <div class="project-overlay">
+              <div class="project-overlay-icon">
+                <i class="fa-brands fa-behance"></i>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category" data-en="Education" data-ar="تعليم">Education</span>
+            <h3 class="project-name" data-en="Wasleen Admin Dashboard" data-ar="لوحة تحكم واصلين">Wasleen Admin Dashboard</h3>
+            <p class="project-desc"
+               data-en="School transport management system designed for Iraq education market."
+               data-ar="نظام إدارة نقل مدرسي مصمم للسوق التعليمي العراقي.">
+              School transport management system designed for Iraq education market.
+            </p>
+          </div>
+        </article>
+
+        <!-- Project 3: Wasleen App -->
+        <article class="project-card fade-up fade-up-delay-2" data-category="education"
+                 onclick="window.open('https://www.behance.net/gallery/240187279/Wasleen-School-Transport-App-for-Parents-Drivers','_blank')"
+                 role="button" tabindex="0" aria-label="View Wasleen App project on Behance">
+          <div class="project-img-wrap">
+            <img src="./assets/proj-wasleen-app.png"
+                 alt="Wasleen App for Parents and Drivers project cover" loading="lazy" />
+            <div class="project-overlay">
+              <div class="project-overlay-icon">
+                <i class="fa-brands fa-behance"></i>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category" data-en="Education" data-ar="تعليم">Education</span>
+            <h3 class="project-name" data-en="Wasleen App — Parents & Drivers" data-ar="تطبيق واصلين — الآباء والسائقون">Wasleen App — Parents & Drivers</h3>
+            <p class="project-desc"
+               data-en="Intuitive mobile app for school transport tracking and communication."
+               data-ar="تطبيق موبايل بديهي لتتبع النقل المدرسي والتواصل.">
+              Intuitive mobile app for school transport tracking and communication.
+            </p>
+          </div>
+        </article>
+
+        <!-- Project 4: Men's Fashion App -->
+        <article class="project-card fade-up" data-category="ecommerce"
+                 onclick="window.open('https://www.behance.net/gallery/237635523/Mens-fashion-app-for-formal-wear','_blank')"
+                 role="button" tabindex="0" aria-label="View Men's Fashion App project on Behance">
+          <div class="project-img-wrap">
+            <img src="./assets/proj-fashion.png"
+                 alt="Men's Fashion App project cover" loading="lazy" />
+            <div class="project-overlay">
+              <div class="project-overlay-icon">
+                <i class="fa-brands fa-behance"></i>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category" data-en="E-Commerce" data-ar="تجارة إلكترونية">E-Commerce</span>
+            <h3 class="project-name" data-en="Men's Fashion App" data-ar="تطبيق أزياء رجالية">Men's Fashion App</h3>
+            <p class="project-desc"
+               data-en="Elegant mobile shopping experience for men's formal wear collections."
+               data-ar="تجربة تسوق موبايل أنيقة لمجموعات الملابس الرسمية للرجال.">
+              Elegant mobile shopping experience for men's formal wear collections.
+            </p>
+          </div>
+        </article>
+
+        <!-- Project 5: Biotics -->
+        <article class="project-card fade-up fade-up-delay-1" data-category="edtech"
+                 onclick="window.open('https://www.behance.net/gallery/236806683/Biotics-Gamified-Learning-App','_blank')"
+                 role="button" tabindex="0" aria-label="View Biotics project on Behance">
+          <div class="project-img-wrap">
+            <img src="./assets/proj-biotics.png"
+                 alt="Biotics Gamified Learning App project cover" loading="lazy" />
+            <div class="project-overlay">
+              <div class="project-overlay-icon">
+                <i class="fa-brands fa-behance"></i>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category" data-en="EdTech" data-ar="تعليم تقني">EdTech</span>
+            <h3 class="project-name" data-en="Biotics — Gamified Learning" data-ar="Biotics — التعلم التفاعلي">Biotics — Gamified Learning</h3>
+            <p class="project-desc"
+               data-en="Engaging gamified learning app that makes education fun and effective."
+               data-ar="تطبيق تعليمي تفاعلي يجعل التعلم ممتعاً وفعالاً.">
+              Engaging gamified learning app that makes education fun and effective.
+            </p>
+          </div>
+        </article>
+
+        <!-- Project 6: Weekly Book -->
+        <article class="project-card fade-up fade-up-delay-2" data-category="edtech"
+                 onclick="window.open('https://www.behance.net/gallery/235456721/Weekly-Book-A-Modern-Platform-for-Book-Discovery','_blank')"
+                 role="button" tabindex="0" aria-label="View Weekly Book project on Behance">
+          <div class="project-img-wrap">
+            <img src="./assets/proj-weekly-book.png"
+                 alt="Weekly Book Platform project cover" loading="lazy" />
+            <div class="project-overlay">
+              <div class="project-overlay-icon">
+                <i class="fa-brands fa-behance"></i>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category" data-en="EdTech" data-ar="تعليم تقني">EdTech</span>
+            <h3 class="project-name" data-en="Weekly Book Platform" data-ar="منصة الكتاب الأسبوعي">Weekly Book Platform</h3>
+            <p class="project-desc"
+               data-en="Modern platform for book discovery, reading tracking, and community."
+               data-ar="منصة عصرية لاكتشاف الكتب وتتبع القراءة والمجتمع.">
+              Modern platform for book discovery, reading tracking, and community.
+            </p>
+          </div>
+        </article>
+
+        <!-- Project 7: Task Ease -->
+        <article class="project-card fade-up" data-category="productivity"
+                 onclick="window.open('https://www.behance.net/gallery/230298617/Task-Ease-Smart-Task-Manager-App-Design','_blank')"
+                 role="button" tabindex="0" aria-label="View Task Ease project on Behance">
+          <div class="project-img-wrap">
+            <img src="./assets/proj-taskease.png"
+                 alt="Task Ease Smart Task Manager project cover" loading="lazy" />
+            <div class="project-overlay">
+              <div class="project-overlay-icon">
+                <i class="fa-brands fa-behance"></i>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-category" data-en="Productivity" data-ar="إنتاجية">Productivity</span>
+            <h3 class="project-name" data-en="Task Ease — Smart Manager" data-ar="Task Ease — مدير ذكي">Task Ease — Smart Manager</h3>
+            <p class="project-desc"
+               data-en="Clean and efficient task management app designed for modern workflows."
+               data-ar="تطبيق إدارة مهام نظيف وفعال مصمم لسير العمل الحديث.">
+              Clean and efficient task management app designed for modern workflows.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CERTIFICATES SECTION ============ -->
+  <section id="certificates" aria-labelledby="certs-title">
+    <div class="section-inner">
+      <div class="section-header fade-up">
+        <span class="section-label" data-en="Credentials" data-ar="المؤهلات">Credentials</span>
+        <h2 class="section-title" id="certs-title" data-en="Certificates" data-ar="الشهادات">Certificates</h2>
+      </div>
+
+      <div class="certs-grid">
+
+        <!-- Cert 1: Google UX -->
+        <article class="cert-card fade-up" data-cert-title="UX/UI Design Specialization — Google (Coursera)"
+                 data-cert-pdf="https://drive.google.com/file/d/16uWSVNzweCaVw8Wu21arjHu-4Y-32clh/view"
+                 data-cert-img="./assets/cert-google-ux.png"
+                 role="button" tabindex="0" aria-label="View Google UX Design Certificate">
+          <div class="cert-img-wrap">
+            <img src="./assets/cert-google-ux.png" alt="Google UX Design Certificate" loading="lazy" />
+            <div class="cert-overlay">
+              <div class="cert-overlay-icon">
+                <i class="fa-solid fa-file-pdf"></i>
+                <span data-en="View PDF" data-ar="عرض PDF">View PDF</span>
+              </div>
+            </div>
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-name" data-en="UX/UI Design Specialization — Google" data-ar="تخصص تصميم UX/UI — جوجل">UX/UI Design Specialization — Google</h3>
+          </div>
+        </article>
+
+        <!-- Cert 2: UX ITI -->
+        <article class="cert-card fade-up fade-up-delay-1" data-cert-title="UX Design Fundamentals — ITI"
+                 data-cert-pdf="https://drive.google.com/file/d/1p1SBGaJH4Nn3xvdNUARs-D32w1v6URP-/view"
+                 data-cert-img="./assets/cert-iti-ux.png"
+                 role="button" tabindex="0" aria-label="View UX Design Fundamentals ITI Certificate">
+          <div class="cert-img-wrap">
+            <img src="./assets/cert-iti-ux.png" alt="UX Design Fundamentals ITI Certificate" loading="lazy" />
+            <div class="cert-overlay">
+              <div class="cert-overlay-icon">
+                <i class="fa-solid fa-file-pdf"></i>
+                <span data-en="View PDF" data-ar="عرض PDF">View PDF</span>
+              </div>
+            </div>
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-name" data-en="UX Design Fundamentals — ITI" data-ar="أساسيات تصميم UX — ITI">UX Design Fundamentals — ITI</h3>
+          </div>
+        </article>
+
+        <!-- Cert 3: UX Edraak -->
+        <article class="cert-card fade-up fade-up-delay-2" data-cert-title="User Experience Design — Edraak"
+                 data-cert-pdf="https://drive.google.com/file/d/162CDWXU5RZ_JbULWT0NIb439KmbROOUS/view"
+                 data-cert-img="./assets/cert-edraak.png"
+                 role="button" tabindex="0" aria-label="View User Experience Design Edraak Certificate">
+          <div class="cert-img-wrap">
+            <img src="./assets/cert-edraak.png" alt="User Experience Design Edraak Certificate" loading="lazy" />
+            <div class="cert-overlay">
+              <div class="cert-overlay-icon">
+                <i class="fa-solid fa-file-pdf"></i>
+                <span data-en="View PDF" data-ar="عرض PDF">View PDF</span>
+              </div>
+            </div>
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-name" data-en="User Experience Design — Edraak" data-ar="تصميم تجربة المستخدم — إدراك">User Experience Design — Edraak</h3>
+          </div>
+        </article>
+
+        <!-- Cert 4: Google Analytics -->
+        <article class="cert-card fade-up" data-cert-title="Google Analytics Certification — Google"
+                 data-cert-pdf="https://drive.google.com/file/d/19pyWXPTN-NqYYOxrIoNiRxLB_LKtBNP5/view"
+                 data-cert-img="./assets/cert-analytics.png"
+                 role="button" tabindex="0" aria-label="View Google Analytics Certificate">
+          <div class="cert-img-wrap">
+            <img src="./assets/cert-analytics.png" alt="Google Analytics Certificate" loading="lazy" />
+            <div class="cert-overlay">
+              <div class="cert-overlay-icon">
+                <i class="fa-solid fa-file-pdf"></i>
+                <span data-en="View PDF" data-ar="عرض PDF">View PDF</span>
+              </div>
+            </div>
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-name" data-en="Google Analytics Certification" data-ar="شهادة Google Analytics">Google Analytics Certification</h3>
+          </div>
+        </article>
+
+        <!-- Cert 5: Digital Marketing -->
+        <article class="cert-card fade-up fade-up-delay-1" data-cert-title="Digital Marketing — ITI"
+                 data-cert-pdf="https://drive.google.com/file/d/1jmzoziARAveKuJwzLPH3LnPlNtSAhQjW/view"
+                 data-cert-img="./assets/cert-digital-marketing.png"
+                 role="button" tabindex="0" aria-label="View Digital Marketing ITI Certificate">
+          <div class="cert-img-wrap">
+            <img src="./assets/cert-digital-marketing.png" alt="Digital Marketing ITI Certificate" loading="lazy" />
+            <div class="cert-overlay">
+              <div class="cert-overlay-icon">
+                <i class="fa-solid fa-file-pdf"></i>
+                <span data-en="View PDF" data-ar="عرض PDF">View PDF</span>
+              </div>
+            </div>
+          </div>
+          <div class="cert-info">
+            <h3 class="cert-name" data-en="Digital Marketing — ITI" data-ar="التسويق الرقمي — ITI">Digital Marketing — ITI</h3>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Certificate viewer">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close certificate viewer">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <img src="" alt="" class="lightbox-img" id="lightboxImg" />
+      <div class="lightbox-footer">
+        <span class="lightbox-title" id="lightboxTitle"></span>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="lightbox-btn" id="lightboxPdfBtn">
+          <i class="fa-solid fa-file-pdf"></i>
+          <span data-en="View Full Certificate" data-ar="عرض الشهادة كاملة">View Full Certificate</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ TESTIMONIALS SECTION ============ -->
+  <section id="testimonials" aria-labelledby="testimonials-title">
+    <div class="section-inner">
+      <div class="section-header fade-up">
+        <span class="section-label" data-en="Client feedback" data-ar="آراء العملاء">Client feedback</span>
+        <h2 class="section-title" id="testimonials-title" data-en="What Clients Say" data-ar="ماذا يقول العملاء">What Clients Say</h2>
+      </div>
+
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="carouselTrack">
+
+          <!-- Testimonial 1 - Hussein Fakher - Wasleen -->
+          <div class="testimonial-card">
+            <div class="testimonial-quote">❝</div>
+            <p class="testimonial-text"
+               data-en="&quot;Working with Ziad on both the Wasleen Admin Dashboard and the Parent & Driver App was a seamless experience. He understood our product vision from day one and delivered a design system that our dev team could build on with ease. The attention to detail in every screen was impressive.&quot;"
+               data-ar="&quot;العمل مع زياد على لوحة تحكم واصلين وتطبيق الآباء والسائقين كان تجربة سلسة للغاية. فهم رؤية منتجنا من اليوم الأول وقدّم نظام تصميم يمكن لفريق التطوير البناء عليه بسهولة. الاهتمام بالتفاصيل في كل شاشة كان مبهراً.&quot;">
+              &quot;Working with Ziad on both the Wasleen Admin Dashboard and the Parent &amp; Driver App was a seamless experience. He understood our product vision from day one and delivered a design system that our dev team could build on with ease. The attention to detail in every screen was impressive.&quot;
+            </p>
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <div class="testimonial-divider"></div>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">H</div>
+              <div>
+                <div class="testimonial-name">Hussein Fakher</div>
+                <div class="testimonial-role" data-en="Product Manager, Wasleen" data-ar="Product Manager, Wasleen">Product Manager, Wasleen</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 - SaaS Landing Page -->
+          <div class="testimonial-card">
+            <div class="testimonial-quote">❝</div>
+            <p class="testimonial-text"
+               data-en="&quot;Ziad designed our SaaS landing page and the results were beyond expectations. The page had a clear hierarchy, strong CTA placement, and a visual language that perfectly matched our brand. We saw a significant boost in trial sign-ups within the first two weeks of launch.&quot;"
+               data-ar="&quot;صمّم زياد صفحة الهبوط لمنتجنا البرمجي وكانت النتائج تفوق التوقعات. الصفحة كانت واضحة التسلسل الهرمي مع توظيف قوي لعناصر الاستدعاء للعمل. شهدنا ارتفاعاً ملحوظاً في التسجيلات التجريبية خلال أسبوعين من الإطلاق.&quot;">
+              &quot;Ziad designed our SaaS landing page and the results were beyond expectations. The page had a clear hierarchy, strong CTA placement, and a visual language that perfectly matched our brand. We saw a significant boost in trial sign-ups within the first two weeks of launch.&quot;
+            </p>
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <div class="testimonial-divider"></div>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">R</div>
+              <div>
+                <div class="testimonial-name">Rami Al-Sayed</div>
+                <div class="testimonial-role" data-en="CEO, SaaS Startup" data-ar="الرئيس التنفيذي، شركة SaaS ناشئة">CEO, SaaS Startup</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 - Biotics -->
+          <div class="testimonial-card">
+            <div class="testimonial-quote">❝</div>
+            <p class="testimonial-text"
+               data-en="&quot;Ziad brought Biotics to life with a gamified learning experience that our users genuinely love. He balanced playful design with educational clarity in a way I haven't seen many designers pull off. The onboarding flow alone reduced our drop-off rate by over 35%.&quot;"
+               data-ar="&quot;أحيا زياد تطبيق Biotics بتجربة تعلّم تفاعلية يحبها مستخدمونا فعلاً. وازن بين التصميم المرح والوضوح التعليمي بطريقة نادرة. تدفق الإعداد وحده قلّص معدل التخلي لدينا بأكثر من 35%.&quot;">
+              &quot;Ziad brought Biotics to life with a gamified learning experience that our users genuinely love. He balanced playful design with educational clarity in a way I haven't seen many designers pull off. The onboarding flow alone reduced our drop-off rate by over 35%.&quot;
+            </p>
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <div class="testimonial-divider"></div>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">N</div>
+              <div>
+                <div class="testimonial-name">Nour Khalil</div>
+                <div class="testimonial-role" data-en="Co-Founder, Biotics EdTech" data-ar="المؤسس المشارك، Biotics EdTech">Co-Founder, Biotics EdTech</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 - Task Ease -->
+          <div class="testimonial-card">
+            <div class="testimonial-quote">❝</div>
+            <p class="testimonial-text"
+               data-en="&quot;Task Ease needed to feel smart without feeling complex — Ziad nailed it. Every interaction was intentional, every screen felt natural. Our beta users gave the UX a 4.8 out of 5, which is something we're incredibly proud of. Ziad's process was structured and collaborative throughout.&quot;"
+               data-ar="&quot;احتاج Task Ease أن يبدو ذكياً دون أن يكون معقداً — وزياد حقق ذلك بدقة. كل تفاعل كان مقصوداً وكل شاشة بدت طبيعية. منحه مستخدمو النسخة التجريبية 4.8 من 5 في تجربة المستخدم. كانت عملية زياد منظمة وتعاونية طوال الوقت.&quot;">
+              &quot;Task Ease needed to feel smart without feeling complex — Ziad nailed it. Every interaction was intentional, every screen felt natural. Our beta users gave the UX a 4.8 out of 5, which is something we're incredibly proud of. Ziad&apos;s process was structured and collaborative throughout.&quot;
+            </p>
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <div class="testimonial-divider"></div>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">K</div>
+              <div>
+                <div class="testimonial-name">Karim Mansour</div>
+                <div class="testimonial-role" data-en="Product Lead, Task Ease" data-ar="قائد المنتج، Task Ease">Product Lead, Task Ease</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 5 - Weekly Book -->
+          <div class="testimonial-card">
+            <div class="testimonial-quote">❝</div>
+            <p class="testimonial-text"
+               data-en="&quot;Ziad redesigned the Weekly Book platform and transformed it from a simple listing page into a full discovery experience. The reading community features he designed feel intuitive and warm. Our active user retention improved by 40% after the redesign went live.&quot;"
+               data-ar="&quot;أعاد زياد تصميم منصة الكتاب الأسبوعي وحوّلها من صفحة قوائم بسيطة إلى تجربة اكتشاف متكاملة. ميزات مجتمع القراءة التي صممها تبدو بديهية ودافئة. تحسّن معدل الاحتفاظ بالمستخدمين النشطين بنسبة 40% بعد إطلاق التصميم الجديد.&quot;">
+              &quot;Ziad redesigned the Weekly Book platform and transformed it from a simple listing page into a full discovery experience. The reading community features he designed feel intuitive and warm. Our active user retention improved by 40% after the redesign went live.&quot;
+            </p>
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <div class="testimonial-divider"></div>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">S</div>
+              <div>
+                <div class="testimonial-name">Sara Nabil</div>
+                <div class="testimonial-role" data-en="Founder, Weekly Book" data-ar="مؤسسة، الكتاب الأسبوعي">Founder, Weekly Book</div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /carousel-track -->
+
+        <!-- Carousel Controls -->
+        <div class="carousel-controls">
+
+          <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Testimonial navigation"></div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT SECTION ============ -->
+  <section id="contact" aria-labelledby="contact-title">
+    <div class="section-inner">
+      <div class="contact-inner">
+        <div class="section-header fade-up">
+          <span class="section-label" data-en="Get in touch" data-ar="تواصل معي">Get in touch</span>
+          <h2 class="section-title" id="contact-title" data-en="Let's Build Something Great" data-ar="لنبنِ شيئاً رائعاً">Let's Build Something Great</h2>
+          <p class="section-subtitle"
+             data-en="Have a project in mind or looking for a talented designer? I'd love to hear from you."
+             data-ar="هل لديك مشروع في ذهنك أو تبحث عن مصمم موهوب؟ يسعدني سماعك.">
+            Have a project in mind or looking for a talented designer? I'd love to hear from you.
+          </p>
+        </div>
+
+        <form class="contact-form fade-up fade-up-delay-1" id="contactForm" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="fullName">
+              <span data-en="Full Name" data-ar="الاسم الكامل">Full Name</span>
+              <span aria-hidden="true"> *</span>
+            </label>
+            <input class="form-input" type="text" id="fullName" name="fullName"
+                   placeholder="Your full name" required autocomplete="name" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="emailAddr">
+              <span data-en="Email Address" data-ar="البريد الإلكتروني">Email Address</span>
+              <span aria-hidden="true"> *</span>
+            </label>
+            <input class="form-input" type="email" id="emailAddr" name="from_email"
+                   placeholder="your@email.com" required autocomplete="email" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="waNumber">
+              <span data-en="WhatsApp Number" data-ar="رقم الواتساب">WhatsApp Number</span>
+              <span aria-hidden="true"> *</span>
+            </label>
+            <input class="form-input" type="tel" id="waNumber" name="whatsapp"
+                   placeholder="+20 1XX XXX XXXX" required autocomplete="tel" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="message">
+              <span data-en="Message" data-ar="الرسالة">Message</span>
+              <span aria-hidden="true"> *</span>
+            </label>
+            <textarea class="form-textarea" id="message" name="message"
+                      placeholder="Tell me about your project..." required></textarea>
+          </div>
+
+          <button type="submit" class="form-submit" id="submitBtn">
+            <span class="btn-text">
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+              <span data-en="Send Message" data-ar="إرسال الرسالة">Send Message</span>
+            </span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+
+          <div class="form-success" id="formSuccess" role="alert" aria-live="polite">
+            <i class="fa-solid fa-circle-check"></i>
+            <span data-en="Message sent successfully! I'll get back to you soon." data-ar="تم إرسال الرسالة بنجاح! سأرد عليك قريباً.">
+              Message sent successfully! I'll get back to you soon.
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">
+          ZIAD <span>MOHAMED</span>
+        </div>
+        <div class="footer-tagline" data-en="Product Designer" data-ar="مصمم منتجات">Product Designer</div>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://www.behance.net/ziadmohmed2" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Behance">
+          <i class="fa-brands fa-behance"></i>
+        </a>
+        <a href="https://wa.me/201007011458" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/ziad-mohamed-96832a31b/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.facebook.com/ziad.mohmed.568294" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/ziad__mohamed_00" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+
+      <p class="footer-copy">
+        &copy; <span id="footerYear"></span> Ziad Mohamed. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ============ FLOATING BUTTONS ============ -->
+  <div class="floating-buttons">
+    <a href="#contact" class="hire-me-btn" data-en="Hire Me" data-ar="وظفني">Hire Me</a>
+    <button class="back-top-btn" id="backTopBtn" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
