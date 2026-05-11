@@ -4,6 +4,29 @@
    Fonts: Syne (Display) + DM Sans (Body)
    ============================================================ */
 
+
+/* ============================================================
+   DARK MODE VARIABLES (uncomment to switch back to dark mode)
+   Replace :root variables with these to enable dark mode:
+   --bg: #07070f;
+   --bg-2: #0d0d1a;
+   --bg-3: #12121f;
+   --bg-card: #111120;
+   --bg-card-hover: #161628;
+   --text: #f0f0ff;
+   --text-muted: #8888aa;
+   --text-subtle: #555577;
+   --border: rgba(108, 54, 254, 0.15);
+   --border-subtle: rgba(255, 255, 255, 0.06);
+   --glass: rgba(13, 13, 26, 0.8);
+   --glass-border: rgba(108, 54, 254, 0.2);
+   --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+   --shadow-primary: 0 8px 32px rgba(108, 54, 254, 0.25);
+   Also change navbar background:
+   background: rgba(13, 13, 26, 0.85);
+   background scrolled: rgba(10, 10, 20, 0.95);
+   ============================================================ */
+
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap');
 
 /* ============================================================
@@ -49,7 +72,6 @@
   --nav-height: 70px;
 }
 
-/* Dark mode only - no light mode */
 
 /* ============================================================
    RESET & BASE
@@ -328,7 +350,7 @@ ul { list-style: none; }
   width: 55%;
   object-fit: cover;
   object-position: top center;
-  opacity: 0.40;
+  opacity: 0.64;
   mask-image: linear-gradient(to left, rgba(0,0,0,0.8) 30%, transparent 100%),
               linear-gradient(to top, transparent 0%, rgba(0,0,0,1) 20%);
   -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0.8) 30%, transparent 100%),
@@ -357,16 +379,14 @@ ul { list-style: none; }
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(108, 54, 254, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(108, 54, 254, 0.08) 1px, transparent 1px);
+    linear-gradient(rgba(108, 54, 254, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(108, 54, 254, 0.15) 1px, transparent 1px);
   background-size: 60px 60px;
-  opacity: 0.32;
+  opacity: 0.6;
   mask-image: radial-gradient(ellipse 60% 80% at 10% 50%, black 0%, transparent 70%);
   -webkit-mask-image: radial-gradient(ellipse 60% 80% at 10% 50%, black 0%, transparent 70%);
   transition: mask-image 0.4s ease, -webkit-mask-image 0.4s ease;
 }
-
-
 
 
 .hero-content {
@@ -1576,7 +1596,7 @@ footer {
   .hero-bg-photo {
     width: 100%;
     right: 0;
-    opacity: 0.40;
+    opacity: 0.64;
   }
 
   .projects-grid {
@@ -1635,47 +1655,6 @@ footer {
 /* ============================================================
    RTL SUPPORT - ARABIC
    ============================================================ */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Carousel controls - dots only */
@@ -1750,7 +1729,7 @@ html, body {
     width: 100%;
     right: 0;
     left: 0;
-    opacity: 0.25;
+    opacity: 0.64;
   }
 
   .hero-actions {
