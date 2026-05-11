@@ -350,7 +350,7 @@ ul { list-style: none; }
   width: 55%;
   object-fit: cover;
   object-position: top center;
-  opacity: 0.64;
+  opacity: 0.80;
   mask-image: linear-gradient(to left, rgba(0,0,0,0.8) 30%, transparent 100%),
               linear-gradient(to top, transparent 0%, rgba(0,0,0,1) 20%);
   -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0.8) 30%, transparent 100%),
@@ -382,7 +382,7 @@ ul { list-style: none; }
     linear-gradient(rgba(72, 20, 200, 0.4) 1px, transparent 1px),
     linear-gradient(90deg, rgba(72, 20, 200, 0.4) 1px, transparent 1px);
   background-size: 60px 60px;
-  opacity: 0.4;
+  opacity: 0.64;
   mask-image: radial-gradient(ellipse 60% 80% at 10% 50%, black 0%, transparent 70%);
   -webkit-mask-image: radial-gradient(ellipse 60% 80% at 10% 50%, black 0%, transparent 70%);
   transition: mask-image 0.4s ease, -webkit-mask-image 0.4s ease;
@@ -1596,7 +1596,7 @@ footer {
   .hero-bg-photo {
     width: 100%;
     right: 0;
-    opacity: 0.64;
+    opacity: 0.80;
   }
 
   .projects-grid {
@@ -1729,7 +1729,7 @@ html, body {
     width: 100%;
     right: 0;
     left: 0;
-    opacity: 0.64;
+    opacity: 0.80;
   }
 
   .hero-actions {
