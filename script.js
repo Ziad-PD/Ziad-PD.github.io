@@ -1,3 +1,35 @@
+
+/* ============================================================
+   THEME TOGGLE - DARK / LIGHT MODE
+   ============================================================ */
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon   = document.getElementById('themeIcon');
+const html        = document.documentElement;
+
+// Default: dark mode
+const savedTheme = localStorage.getItem('theme') || 'dark';
+html.setAttribute('data-theme', savedTheme);
+updateThemeIcon(savedTheme);
+
+function updateThemeIcon(theme) {
+  if (!themeIcon) return;
+  if (theme === 'dark') {
+    themeIcon.className = 'fa-solid fa-moon';
+  } else {
+    themeIcon.className = 'fa-solid fa-sun';
+  }
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const current = html.getAttribute('data-theme');
+    const next    = current === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    updateThemeIcon(next);
+  });
+}
+
 /* ============================================================
    1. EMAILJS INIT
    ============================================================ */
