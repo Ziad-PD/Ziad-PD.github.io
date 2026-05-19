@@ -14,9 +14,9 @@ updateThemeIcon(savedTheme);
 function updateThemeIcon(theme) {
   if (!themeIcon) return;
   if (theme === 'dark') {
-    themeIcon.className = 'fa-solid fa-moon';
-  } else {
     themeIcon.className = 'fa-solid fa-sun';
+  } else {
+    themeIcon.className = 'fa-solid fa-moon';
   }
 }
 
