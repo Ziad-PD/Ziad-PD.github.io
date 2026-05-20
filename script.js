@@ -1,12 +1,7 @@
-
-/* ============================================================
-   THEME TOGGLE - DARK / LIGHT MODE
-   ============================================================ */
 const themeToggle = document.getElementById('themeToggle');
 const themeIcon   = document.getElementById('themeIcon');
 const html        = document.documentElement;
 
-// Default: dark mode
 const savedTheme = localStorage.getItem('theme') || 'dark';
 html.setAttribute('data-theme', savedTheme);
 updateThemeIcon(savedTheme);
@@ -15,8 +10,10 @@ function updateThemeIcon(theme) {
   if (!themeIcon) return;
   if (theme === 'dark') {
     themeIcon.className = 'fa-solid fa-sun';
+    themeIcon.style.color = '#FFBD2E';
   } else {
     themeIcon.className = 'fa-solid fa-moon';
+    themeIcon.style.color = '';
   }
 }
 
@@ -30,14 +27,8 @@ if (themeToggle) {
   });
 }
 
-/* ============================================================
-   1. EMAILJS INIT
-   ============================================================ */
 emailjs.init('jRQiSDITJdNx2Azz4');
 
-/* ============================================================
-   2. CUSTOM CURSOR
-   ============================================================ */
 const cursorDot  = document.getElementById('cursorDot');
 const cursorRing = document.getElementById('cursorRing');
 
@@ -50,7 +41,6 @@ document.addEventListener('mousemove', e => {
   cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
 });
 
-// Smooth ring follow
 function animateRing() {
   ringX += (mouseX - ringX) * 0.15;
   ringY += (mouseY - ringY) * 0.15;
@@ -59,7 +49,6 @@ function animateRing() {
 }
 animateRing();
 
-// Expand on interactive elements
 document.querySelectorAll('a, button, .project-card, .cert-card, .skill-tag, .filter-tab').forEach(el => {
   el.addEventListener('mouseenter', () => {
     cursorDot.classList.add('expanded');
@@ -71,9 +60,6 @@ document.querySelectorAll('a, button, .project-card, .cert-card, .skill-tag, .fi
   });
 });
 
-/* ============================================================
-   3. SCROLL PROGRESS BAR
-   ============================================================ */
 const scrollProgress = document.getElementById('scrollProgress');
 
 window.addEventListener('scroll', () => {
@@ -83,21 +69,14 @@ window.addEventListener('scroll', () => {
   scrollProgress.style.width = scrollPct + '%';
 }, { passive: true });
 
-/* ============================================================
-   4. NAVBAR — scroll effect + active link highlight
-   ============================================================ */
 const navbar    = document.getElementById('navbar');
 const navLinks  = document.querySelectorAll('.nav-links a, .mobile-nav a');
 const sections  = document.querySelectorAll('section[id]');
 
 window.addEventListener('scroll', () => {
-  // Glass effect
   navbar.classList.toggle('scrolled', window.scrollY > 40);
-
-  // Back-to-top button
   backTopBtn.classList.toggle('visible', window.scrollY > 400);
 
-  // Active nav link
   let current = '';
   sections.forEach(sec => {
     if (window.scrollY >= sec.offsetTop - 120) current = sec.getAttribute('id');
@@ -108,9 +87,6 @@ window.addEventListener('scroll', () => {
   });
 }, { passive: true });
 
-/* ============================================================
-   5. HAMBURGER MENU
-   ============================================================ */
 const hamburger = document.getElementById('hamburger');
 const mobileNav = document.getElementById('mobileNav');
 
@@ -120,7 +96,6 @@ hamburger.addEventListener('click', () => {
   hamburger.setAttribute('aria-expanded', isOpen);
 });
 
-// Close on link click
 mobileNav.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     mobileNav.classList.remove('open');
@@ -129,9 +104,6 @@ mobileNav.querySelectorAll('a').forEach(link => {
   });
 });
 
-/* ============================================================
-   6. FADE-UP SCROLL ANIMATIONS
-   ============================================================ */
 const fadeEls = document.querySelectorAll('.fade-up');
 
 const fadeObserver = new IntersectionObserver(entries => {
@@ -145,9 +117,6 @@ const fadeObserver = new IntersectionObserver(entries => {
 
 fadeEls.forEach(el => fadeObserver.observe(el));
 
-/* ============================================================
-   7. HERO TYPING EFFECT
-   ============================================================ */
 const typingEl = document.getElementById('typingText');
 const currentLang = () => document.documentElement.lang;
 
@@ -182,9 +151,6 @@ function typeEffect() {
 }
 setTimeout(typeEffect, 1200);
 
-/* ============================================================
-   8. STATS COUNTER
-   ============================================================ */
 const statNumbers = document.querySelectorAll('.stat-number');
 
 function animateCounter(el) {
@@ -215,9 +181,6 @@ const statsObserver = new IntersectionObserver(entries => {
 
 statNumbers.forEach(el => statsObserver.observe(el));
 
-/* ============================================================
-   9. PORTFOLIO FILTER TABS
-   ============================================================ */
 const filterTabs    = document.querySelectorAll('.filter-tab');
 const projectCards  = document.querySelectorAll('.project-card');
 const projectsGrid  = document.getElementById('projectsGrid');
@@ -241,7 +204,6 @@ filterTabs.forEach(tab => {
   });
 });
 
-// Keyboard support for project cards
 projectCards.forEach(card => {
   card.addEventListener('keydown', e => {
     if (e.key === 'Enter' || e.key === ' ') {
@@ -251,9 +213,6 @@ projectCards.forEach(card => {
   });
 });
 
-/* ============================================================
-   10. CERTIFICATES LIGHTBOX
-   ============================================================ */
 const lightbox        = document.getElementById('lightbox');
 const lightboxImg     = document.getElementById('lightboxImg');
 const lightboxTitle   = document.getElementById('lightboxTitle');
@@ -286,9 +245,6 @@ lightboxClose.addEventListener('click', closeLightbox);
 lightboxBdrop.addEventListener('click', closeLightbox);
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 
-/* ============================================================
-   11. TESTIMONIALS CAROUSEL
-   ============================================================ */
 const track       = document.getElementById('carouselTrack');
 const dotsWrapper = document.getElementById('carouselDots');
 const prevBtn     = document.getElementById('carouselPrev') || {addEventListener: ()=>{}};
@@ -354,7 +310,6 @@ function prev() { goTo(currentSlide - 1); }
 prevBtn.addEventListener('click', () => { prev(); resetAutoplay(); });
 nextBtn.addEventListener('click', () => { next(); resetAutoplay(); });
 
-// Touch swipe support
 let touchStartX = 0;
 if (track) {
   track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
@@ -379,15 +334,11 @@ window.addEventListener('resize', () => {
   goTo(0);
 });
 
-// Init
 setCardWidths();
 buildDots();
 goTo(0);
 startAutoplay();
 
-/* ============================================================
-   12. CONTACT FORM — EmailJS + WhatsApp
-   ============================================================ */
 const contactForm = document.getElementById('contactForm');
 const submitBtn   = document.getElementById('submitBtn');
 const formSuccess = document.getElementById('formSuccess');
@@ -402,11 +353,9 @@ contactForm.addEventListener('submit', async e => {
 
   if (!name || !email || !whatsapp || !message) return;
 
-  // Loading state
   submitBtn.classList.add('loading');
 
   try {
-    // Send via EmailJS
     await emailjs.send('service_oo1xfwa', 'template_kcanybs', {
       from_name:  name,
       from_email: email,
@@ -414,12 +363,10 @@ contactForm.addEventListener('submit', async e => {
       message:    message,
     });
 
-    // Show success
     submitBtn.classList.remove('loading');
     formSuccess.classList.add('show');
     contactForm.reset();
 
-    // Open WhatsApp with pre-filled message
     const waMsg = encodeURIComponent(
       `Hello Ziad! 👋\n\nMy name is ${name}\nEmail: ${email}\n\nMessage:\n${message}`
     );
@@ -427,7 +374,6 @@ contactForm.addEventListener('submit', async e => {
       window.open(`https://wa.me/201007011458?text=${waMsg}`, '_blank');
     }, 800);
 
-    // Hide success after 6s
     setTimeout(() => formSuccess.classList.remove('show'), 6000);
 
   } catch (err) {
@@ -437,18 +383,12 @@ contactForm.addEventListener('submit', async e => {
   }
 });
 
-/* ============================================================
-   13. BACK TO TOP
-   ============================================================ */
 const backTopBtn = document.getElementById('backTopBtn');
 
 backTopBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-/* ============================================================
-   14. LANGUAGE SWITCHER (EN / AR)
-   ============================================================ */
 const langEN = document.getElementById('langEN');
 const langAR = document.getElementById('langAR');
 
@@ -458,12 +398,10 @@ function applyLang(lang) {
   document.documentElement.lang  = lang;
   document.documentElement.dir   = isAR ? 'rtl' : 'ltr';
 
-  // Toggle font for Arabic
   document.body.style.fontFamily = isAR
     ? "'Cairo', sans-serif"
     : "'DM Sans', sans-serif";
 
-  // Update all elements with data-en / data-ar
   document.querySelectorAll('[data-en][data-ar]').forEach(el => {
     const text = isAR ? el.getAttribute('data-ar') : el.getAttribute('data-en');
     if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
@@ -473,37 +411,18 @@ function applyLang(lang) {
     }
   });
 
-  // Update active button
-  langEN.classList.toggle('active', !isAR);
-  langAR.classList.toggle('active', isAR);
-  langEN.setAttribute('aria-pressed', !isAR);
-  langAR.setAttribute('aria-pressed', isAR);
+  if(langEN) langEN.classList.toggle('active', !isAR);
+  if(langAR) langAR.classList.toggle('active', isAR);
+  if(langEN) langEN.setAttribute('aria-pressed', !isAR);
+  if(langAR) langAR.setAttribute('aria-pressed', isAR);
 
-  // Persist
   localStorage.setItem('lang', lang);
 }
 
-langEN.addEventListener('click', () => applyLang('en'));
-langAR.addEventListener('click', () => applyLang('ar'));
+if(langEN) langEN.addEventListener('click', () => applyLang('en'));
+if(langAR) langAR.addEventListener('click', () => applyLang('ar'));
 
-// Load saved language
 const savedLang = localStorage.getItem('lang') || 'en';
 applyLang(savedLang);
 
-/* ============================================================
-   15. FOOTER YEAR
-   ============================================================ */
 document.getElementById('footerYear').textContent = new Date().getFullYear();
-
-/* ============================================================
-   16. COPY LOGO SVG TO ASSETS (runtime note)
-   ============================================================ */
-// NOTE: Place your logo.svg in the /assets/ folder manually.
-// Also save your certificate images as:
-//   assets/cert-google-ux.png
-//   assets/cert-iti-ux.png
-//   assets/cert-edraak.png
-//   assets/cert-analytics.png
-//   assets/cert-digital-marketing.png
-// And your photo as:
-//   assets/ziad-photo.png
