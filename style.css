@@ -434,6 +434,7 @@ ul { list-style: none; }
 .btn-primary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   background: var(--primary);
   color: white;
@@ -441,6 +442,7 @@ ul { list-style: none; }
   border-radius: var(--radius-full);
   font-weight: 600;
   font-size: 0.95rem;
+  min-width: 180px;
   transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
   box-shadow: 0 4px 20px var(--primary-glow);
 }
@@ -454,6 +456,7 @@ ul { list-style: none; }
 .btn-outline {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   background: transparent;
   color: var(--text);
@@ -461,6 +464,7 @@ ul { list-style: none; }
   border-radius: var(--radius-full);
   font-weight: 600;
   font-size: 0.95rem;
+  min-width: 180px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   transition: border-color var(--transition), color var(--transition), background var(--transition), transform var(--transition);
 }
