@@ -1896,3 +1896,83 @@ footer {
   background: rgba(255, 255, 255, 0.8);
   border-color: var(--primary-15);
 }
+/* ============================================================
+   HERO BUTTONS FIX
+   ============================================================ */
+.btn-hero {
+  min-width: 180px;
+  justify-content: center;
+}
+
+.btn-stroke {
+  border: 1.5px solid rgba(255, 255, 255, 0.25) !important;
+  color: var(--text) !important;
+  backdrop-filter: blur(8px);
+}
+
+.btn-stroke:hover {
+  border-color: var(--primary) !important;
+  color: var(--primary) !important;
+  background: var(--primary-subtle) !important;
+}
+
+[data-theme="light"] .btn-stroke {
+  border-color: rgba(37, 99, 235, 0.3) !important;
+}
+
+/* Hero actions responsive */
+@media (max-width: 768px) {
+  .btn-hero {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+/* ============================================================
+   COMPREHENSIVE RESPONSIVE FIXES
+   ============================================================ */
+
+/* Ensure section-inner never overflows */
+.section-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Fix hero on all devices */
+@media (max-width: 1024px) {
+  .hero-title { font-size: clamp(2.2rem, 6vw, 5rem) !important; }
+  .about-grid { grid-template-columns: 1fr !important; }
+  .about-card { width: 100% !important; }
+  .resume-grid { grid-template-columns: 1fr !important; }
+  .projects-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .certs-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+@media (max-width: 768px) {
+  .hero { padding: calc(var(--nav-height) + 80px) 16px 60px !important; }
+  .hero-title { font-size: clamp(1.8rem, 8vw, 2.8rem) !important; }
+  .hero-sub { font-size: 0.9rem !important; }
+  .section-title { font-size: clamp(1.5rem, 6vw, 2rem) !important; }
+  .projects-grid { grid-template-columns: 1fr !important; }
+  .certs-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .stats-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  .stat-number { font-size: 1.6rem !important; }
+  .stat-label { font-size: 0.7rem !important; }
+  .hero-actions { flex-direction: column !important; align-items: stretch !important; }
+  .btn-hero { width: 100% !important; justify-content: center !important; }
+  .contact-form { padding: 20px 16px !important; }
+  .floating-buttons { right: 12px !important; bottom: 20px !important; }
+  section { padding: 60px 16px !important; }
+  .navbar { width: calc(100% - 20px) !important; }
+}
+
+@media (max-width: 480px) {
+  .certs-grid { grid-template-columns: 1fr !important; }
+  .hero-social { flex-wrap: wrap !important; gap: 8px !important; }
+  .filter-tabs { gap: 6px !important; }
+  .filter-tab { padding: 5px 10px !important; font-size: 0.75rem !important; }
+  .tools-row { gap: 10px !important; }
+  .tool-item { padding: 8px 12px !important; gap: 6px !important; }
+}
