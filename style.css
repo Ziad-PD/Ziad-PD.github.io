@@ -465,7 +465,7 @@ ul { list-style: none; }
   font-weight: 600;
   font-size: 0.95rem;
   min-width: 180px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--border);
   transition: border-color var(--transition), color var(--transition), background var(--transition), transform var(--transition);
 }
 
@@ -557,10 +557,10 @@ ul { list-style: none; }
   flex-direction: row;
   align-items: center;
   gap: 10px;
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--bg-card);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 12px 20px;
   white-space: nowrap;
@@ -1891,11 +1891,4 @@ footer {
 [data-theme="light"] .tool-icon[alt="ChatGPT"],
 [data-theme="light"] .tool-icon[alt="Claude"] {
   filter: invert(1) drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-}
-
-[data-theme="light"] .tool-item {
-  background: rgba(255, 255, 255, 0.8);
-  border-color: rgba(37, 99, 235, 0.15);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
 }
