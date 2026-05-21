@@ -19,13 +19,15 @@ function updateThemeIcon(theme) {
 
 if (themeToggle) {
   themeToggle.addEventListener('click', () => {
-    html.classList.add('theme-transitioning');
-    const current = html.getAttribute('data-theme');
-    const next    = current === 'dark' ? 'light' : 'dark';
-    html.setAttribute('data-theme', next);
-    localStorage.setItem('theme', next);
-    updateThemeIcon(next);
-    setTimeout(() => html.classList.remove('theme-transitioning'), 400);
+    html.classList.add('theme-switching');
+    setTimeout(() => {
+      const current = html.getAttribute('data-theme');
+      const next    = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      updateThemeIcon(next);
+      html.classList.remove('theme-switching');
+    }, 150);
   });
 }
 
