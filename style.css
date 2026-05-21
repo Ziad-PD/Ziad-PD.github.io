@@ -51,6 +51,16 @@ html {
   scroll-padding-top: 90px;
 }
 
+html.theme-transitioning *,
+html.theme-transitioning *::before,
+html.theme-transitioning *::after {
+  transition:
+    background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color     0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    color            0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    fill             0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
 body {
   font-family: var(--font-body);
   background: var(--bg);
@@ -512,8 +522,8 @@ ul { list-style: none; }
   overflow: hidden;
   padding: 40px 0 60px;
   margin-top: 40px;
-  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
 }
 
 .tools-track {
@@ -1871,4 +1881,3 @@ footer {
 [data-theme="light"] .tool-icon[alt="ChatGPT"] {
   filter: invert(1) drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
-
