@@ -512,28 +512,8 @@ ul { list-style: none; }
   overflow: hidden;
   padding: 40px 0 60px;
   margin-top: 40px;
-}
-
-.tools-row::before,
-.tools-row::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 120px;
-  z-index: 2;
-  pointer-events: none;
-  transition: background var(--transition);
-}
-
-.tools-row::before {
-  left: 0;
-  background: linear-gradient(to right, var(--bg), transparent);
-}
-
-.tools-row::after {
-  right: 0;
-  background: linear-gradient(to left, var(--bg), transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
 }
 
 .tools-track {
@@ -1888,7 +1868,7 @@ footer {
 }
 
 [data-theme="light"] .tool-icon[alt="Notion"],
-[data-theme="light"] .tool-icon[alt="ChatGPT"],
-[data-theme="light"] .tool-icon[alt="Claude"] {
+[data-theme="light"] .tool-icon[alt="ChatGPT"] {
   filter: invert(1) drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
+
