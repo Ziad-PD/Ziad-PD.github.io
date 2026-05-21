@@ -465,7 +465,7 @@ ul { list-style: none; }
   font-weight: 600;
   font-size: 0.95rem;
   min-width: 180px;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   transition: border-color var(--transition), color var(--transition), background var(--transition), transform var(--transition);
 }
 
@@ -523,6 +523,7 @@ ul { list-style: none; }
   width: 120px;
   z-index: 2;
   pointer-events: none;
+  transition: background var(--transition);
 }
 
 .tools-row::before {
