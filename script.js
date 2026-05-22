@@ -378,8 +378,15 @@ contactForm.addEventListener('submit', async e => {
     const waMsg = encodeURIComponent(
       `Hello Ziad! 👋\n\nMy name is ${name}\nEmail: ${email}\n\nMessage:\n${message}`
     );
+    const waUrl = `https://wa.me/201007011458?text=${waMsg}`;
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
     setTimeout(() => {
-      window.open(`https://wa.me/201007011458?text=${waMsg}`, '_blank');
+      if (isMobile) {
+        window.location.href = waUrl;
+      } else {
+        window.open(waUrl, '_blank');
+      }
     }, 800);
 
     setTimeout(() => formSuccess.classList.remove('show'), 6000);
