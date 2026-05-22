@@ -51,13 +51,23 @@ html {
   scroll-padding-top: 90px;
 }
 
+/* Theme switch animation - applied only during toggle */
+html.theme-animating *,
+html.theme-animating *::before,
+html.theme-animating *::after {
+  transition:
+    background-color 0.35s ease,
+    color            0.35s ease,
+    border-color     0.35s ease,
+    fill             0.35s ease !important;
+}
+
 body {
   font-family: var(--font-body);
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
   overflow-x: hidden;
-  transition: background var(--transition), color var(--transition);
   cursor: none;
 }
 
