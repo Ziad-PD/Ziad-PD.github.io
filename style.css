@@ -49,11 +49,6 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
-  transition: opacity 0.15s ease;
-}
-html.theme-switching {
-  opacity: 0;
-  pointer-events: none;
 }
 
 body {
