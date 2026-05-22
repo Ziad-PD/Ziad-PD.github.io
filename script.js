@@ -19,13 +19,19 @@ function updateThemeIcon(theme) {
 
 if (themeToggle) {
   themeToggle.addEventListener('click', () => {
-    html.classList.add('theme-animating');
-    const current = html.getAttribute('data-theme');
-    const next    = current === 'dark' ? 'light' : 'dark';
-    html.setAttribute('data-theme', next);
-    localStorage.setItem('theme', next);
-    updateThemeIcon(next);
-    setTimeout(() => html.classList.remove('theme-animating'), 400);
+    const overlay = document.getElementById('themeOverlay');
+    // 1. fade overlay in
+    overlay.style.opacity = '1';
+    setTimeout(() => {
+      // 2. change theme while hidden
+      const current = html.getAttribute('data-theme');
+      const next    = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      updateThemeIcon(next);
+      // 3. fade overlay out — everything already changed
+      setTimeout(() => { overlay.style.opacity = '0'; }, 30);
+    }, 180);
   });
 }
 
