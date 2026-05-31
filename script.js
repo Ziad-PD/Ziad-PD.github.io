@@ -350,6 +350,48 @@ startAutoplay();
 const contactForm = document.getElementById('contactForm');
 const submitBtn   = document.getElementById('submitBtn');
 const formSuccess = document.getElementById('formSuccess');
+const formFields = [
+  {
+    input: document.getElementById('fullName'),
+    error: document.getElementById('fullNameError'),
+    message: 'Please enter your full name so I know how to address you.',
+  },
+  {
+    input: document.getElementById('emailAddr'),
+    error: document.getElementById('emailAddrError'),
+    message: 'Please add your email address so I can reply to you.',
+  },
+  {
+    input: document.getElementById('waNumber'),
+    error: document.getElementById('waNumberError'),
+    message: 'Please add your WhatsApp number so we can continue the conversation.',
+  },
+  {
+    input: document.getElementById('message'),
+    error: document.getElementById('messageError'),
+    message: 'Please share a short message about your project or request.',
+  },
+];
+
+function setFieldError(field, message) {
+  field.error.textContent = message;
+  field.error.classList.add('show');
+  field.input.classList.add('error');
+  field.input.setAttribute('aria-invalid', 'true');
+}
+
+function clearFieldError(field) {
+  field.error.textContent = '';
+  field.error.classList.remove('show');
+  field.input.classList.remove('error');
+  field.input.removeAttribute('aria-invalid');
+}
+
+formFields.forEach(field => {
+  field.input.addEventListener('input', () => {
+    if (field.input.value.trim()) clearFieldError(field);
+  });
+});
 
 contactForm.addEventListener('submit', async e => {
   e.preventDefault();
@@ -359,7 +401,21 @@ contactForm.addEventListener('submit', async e => {
   const whatsapp = document.getElementById('waNumber').value.trim();
   const message  = document.getElementById('message').value.trim();
 
-  if (!name || !email || !whatsapp || !message) return;
+  let firstInvalidField = null;
+
+  formFields.forEach(field => {
+    if (!field.input.value.trim()) {
+      setFieldError(field, field.message);
+      if (!firstInvalidField) firstInvalidField = field.input;
+    } else {
+      clearFieldError(field);
+    }
+  });
+
+  if (firstInvalidField) {
+    firstInvalidField.focus();
+    return;
+  }
 
   submitBtn.classList.add('loading');
 

@@ -1334,6 +1334,25 @@ section::before {
   color: var(--primary);
 }
 
+.form-error {
+  display: none;
+  margin: -2px 0 8px;
+  color: #f87171;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.form-error.show {
+  display: block;
+}
+
+.form-input.error,
+.form-textarea.error {
+  border-color: #f87171;
+  box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.16);
+}
+
 .form-input,
 .form-textarea {
   width: 100%;
